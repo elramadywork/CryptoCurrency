@@ -53,15 +53,14 @@ fun CoinDetailScreen(
                 ) {
 
                 item{
+
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-
-
                         Text(
                             text = "${coin.rank}. ${coin.name} (${coin.symbol})",
-                            style = MaterialTheme.typography.bodyMedium,
+                            style = MaterialTheme.typography.headlineMedium,
                             modifier = Modifier.weight(8f)
                         )
 
@@ -100,7 +99,7 @@ fun CoinDetailScreen(
 
                     FlowRow(
                         modifier=Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
                         verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         coin.tags.forEach{tag->
@@ -111,14 +110,8 @@ fun CoinDetailScreen(
                     Text(
                         text ="Team Members" ,
                         style = MaterialTheme.typography.headlineMedium,
-
                         )
                     Spacer(modifier = Modifier.height(15.dp))
-
-
-
-
-
 
                 }
 
