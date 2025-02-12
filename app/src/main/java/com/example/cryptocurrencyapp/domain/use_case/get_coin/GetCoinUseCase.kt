@@ -18,7 +18,9 @@ import javax.inject.Inject
 class GetCoinUseCase @Inject constructor(
     val repository: CoinRepository
 ) {
+
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
+
     operator fun invoke(coinId:String): Flow<Resource<CoinDetails>> = flow {
         try {
             emit(Resource.Loading())
